@@ -1,13 +1,15 @@
 /* ======= GLOBAL STYLES ======= */
 :root {
-  --color-bg: #fefefe;
-  --color-text: #1a1a1a;
-  --color-accent: #0099ff;
-  --color-accent-light: #00d4ff;
-  --color-border: #ccc;
-  --color-grad-1: #ffffff;
-  --color-grad-2: #f0faff;
-  --color-grad-hero: linear-gradient(to right, #ffffff, #e3f2fd);
+  --color-bg: #121212;
+  --color-surface: #1F1F1F;
+  --color-card: #2A2A2A;
+  --color-text: #E0E0E0;
+  --color-subtext: #A8A8A8;
+  --color-accent: #008311;
+  --color-accent-light: #66FFCC;
+  --color-border: #2C2C2C;
+  --color-white-soft: #F5F5F5;
+  --color-grad-hero: linear-gradient(to right, #121212, #1F1F1F);
 }
 
 body {
@@ -25,65 +27,83 @@ body {
 
 /* === NAVBAR === */
 .navbar {
-  background-color: #111827;
-  padding: 15px 0;
+  background-color: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
-  width: 100%;
-  z-index: 999;
+  z-index: 1000;
 }
 
 .nav-flex {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
 .nav-logo {
-  color: #fff;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
   text-decoration: none;
+  gap: 10px;
+}
+
+.logo-img {
+  height: 50px;
+  width: auto;
+}
+
+.site-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
   gap: 20px;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links li a {
-  color: #fff;
   text-decoration: none;
+  color: #333;
   font-weight: 500;
   transition: color 0.3s;
 }
 
 .nav-links li a:hover {
-  color: #38bdf8; /* Biru muda */
+  color: #007bff;
 }
 
-/* Mobile Responsive */
+
 @media (max-width: 768px) {
   .nav-links {
     flex-direction: column;
-    background-color: #111827;
+    background-color: var(--color-bg);
     position: absolute;
     top: 60px;
     right: 20px;
     display: none;
   }
-
   .navbar.active .nav-links {
     display: flex;
   }
 }
 
-
 /* ======= HEADER ======= */
 header {
-  background-color: white;
-  padding: 20px 0;
+  background-image: url("https://ik.imagekit.io/hdxn6kcob/WhatsApp%20Image%202025-07-27%20at%2003.10.39.jpeg?updatedAt=1753557063563");
+  background-position: center;
+  background-size: cover;
+  height: 400px;
+  color: white;
+  text-align: center;
+  padding: 3rem 3rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in;
 }
 
 header .container {
@@ -120,7 +140,6 @@ header h2 {
   margin: 0;
 }
 
-
 /* ======= HERO ======= */
 .hero {
   padding: 60px 20px;
@@ -142,7 +161,7 @@ header h2 {
 .btn-hero {
   margin-top: 20px;
   background-color: var(--color-accent);
-  color: white;
+  color: var(--color-text);
   padding: 12px 24px;
   border: none;
   border-radius: 6px;
@@ -158,14 +177,15 @@ header h2 {
 
 .member {
   padding: 50px 20px;
-  background-color: #f5f5f5;
-  text-align: center;
+  background: var(--color-grad-hero);
+  color: var(--color-text);
 }
 
 .member h2 {
   font-size: 2rem;
   margin-bottom: 30px;
-  color: #222;
+  color: var(--color-text);
+  text-align: center  ;
 }
 
 .member-grid {
@@ -176,13 +196,15 @@ header h2 {
 }
 
 .member-card {
-  background-color: #fff;
+  background-color: white;
+  color: #010101;
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   padding: 20px;
   width: 100%;
   max-width: 250px;
   text-align: center;
+  transition: transform 0.3s ease;
 }
 
 .member-card img {
@@ -199,22 +221,26 @@ header h2 {
 
 .member-card p {
   font-size: 0.9rem;
-  color: #666;
+  color: var(--color-bg);
 }
 
+.member-card:hover {
+  transform: scale(1.05);
+}
 
 .data-region-provinsi {
   padding: 40px 0;
-  background-color: #fff;
-  text-align: left  ;
+  background-color: var(--color-text);
+  text-align: left;
 }
 
 .data-region-provinsi h2 {
+  color: var(--color-bg);
   font-size: 1.8rem;
   margin-bottom: 20px;
+  text-align: center;
 }
 
-/* Membuat chart responsive */
 .chart-container {
   position: relative;
   width: 100%;
@@ -228,19 +254,17 @@ header h2 {
   height: auto !important;
 }
 
-
-
 /* ======= GALLERY ======= */
 .gallery {
   padding: 60px 20px;
-  background-color: #f9fafb;
+  background-color: var(--color-surface);
   text-align: center;
 }
 
 .gallery h2 {
   font-size: 2rem;
   margin-bottom: 30px;
-  color: #1f2937;
+  color: var(--color-text);
 }
 
 .gallery-grid {
@@ -266,8 +290,8 @@ header h2 {
 .btn-gallery {
   display: inline-block;
   padding: 12px 1rem;
-  background-color: #0051ff; /* Hitam modern */
-  color: #fff;
+  background-color: var(--color-accent);
+  color: var(--color-text);
   border-radius: 8px;
   font-size: 1rem;
   text-decoration: none;
@@ -275,18 +299,18 @@ header h2 {
 }
 
 .btn-gallery:hover {
-  background-color: #374151; /* Hover abu-abu gelap */
+  background-color: var(--color-accent-light);
 }
-
 
 .gallery-grid img:hover {
   transform: scale(1.05);
+  box-shadow: 0 0 15px var(--color-accent-light);
 }
 
 /* ======= BERITA ======= */
 .berita {
   padding: 40px 0;
-  background: #f2faff;
+  background-color: var(--color-surface);
 }
 
 .berita h2 {
@@ -296,7 +320,8 @@ header h2 {
 
 .news-item {
   margin-top: 20px;
-  background-color: #ffffff;
+  background: var(--color-grad-hero);
+  color: var(--color-text);
   padding: 20px;
   border-left: 5px solid var(--color-accent);
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
@@ -305,7 +330,7 @@ header h2 {
 /* ======= KONTAK ======= */
 .kontak {
   padding: 40px 0;
-  background: #f0faff;
+  background-color: var(--color-surface);
   text-align: center;
 }
 
@@ -326,7 +351,7 @@ header h2 {
   width: 100%;
   margin: 10px 0;
   padding: 10px;
-  background: #ffffff;
+  background-color: var(--color-surface);
   color: var(--color-text);
   border: 1px solid var(--color-border);
   border-radius: 6px;
@@ -335,7 +360,7 @@ header h2 {
 
 .kontak button {
   background-color: var(--color-accent);
-  color: white;
+  color: var(--color-text);
   padding: 10px 20px;
   border: none;
   border-radius: 6px;
@@ -351,8 +376,8 @@ header h2 {
 /* ======= MEDSOS ======= */
 .medsos {
   padding: 40px 0;
-  background: #ffffff;
-  text-align: center;
+  background-color: var(--color-surface);
+  text-align: left;
 }
 
 .medsos h2 {
@@ -362,7 +387,7 @@ header h2 {
 
 .social-icons {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   flex-wrap: wrap;
   gap: 15px;
 }
@@ -371,7 +396,7 @@ header h2 {
   text-decoration: none;
   padding: 12px 20px;
   border-radius: 8px;
-  color: white;
+  color: var(--color-text);
   font-weight: bold;
   transition: background-color 0.3s;
 }
@@ -387,8 +412,8 @@ header h2 {
 
 /* ======= FOOTER ======= */
 footer {
-  background-color: #f5f5f5;
-  color: #333;
+  background-color: var(--color-surface);
+  color: var(--color-text);
   text-align: center;
   padding: 20px 0;
   font-size: 0.9rem;
