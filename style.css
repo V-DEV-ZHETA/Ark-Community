@@ -1,0 +1,395 @@
+/* ======= GLOBAL STYLES ======= */
+:root {
+  --color-bg: #fefefe;
+  --color-text: #1a1a1a;
+  --color-accent: #0099ff;
+  --color-accent-light: #00d4ff;
+  --color-border: #ccc;
+  --color-grad-1: #ffffff;
+  --color-grad-2: #f0faff;
+  --color-grad-hero: linear-gradient(to right, #ffffff, #e3f2fd);
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* === NAVBAR === */
+.navbar {
+  background-color: #111827;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.nav-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #38bdf8; /* Biru muda */
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    background-color: #111827;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    display: none;
+  }
+
+  .navbar.active .nav-links {
+    display: flex;
+  }
+}
+
+
+/* ======= HEADER ======= */
+header {
+  background-color: white;
+  padding: 20px 0;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 150px;
+  margin-right: 15px;
+}
+
+header h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+header h2 {
+  text-align: center;
+}
+
+.header-center {
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.header-center .logo {
+  margin: 0 auto 10px auto;
+}
+
+.header-center h1 {
+  margin: 0;
+}
+
+
+/* ======= HERO ======= */
+.hero {
+  padding: 60px 20px;
+  background: var(--color-grad-hero);
+  color: var(--color-text);
+}
+
+.hero h2 {
+  font-size: 2rem;
+  text-align: left;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.btn-hero {
+  margin-top: 20px;
+  background-color: var(--color-accent);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.btn-hero:hover {
+  background-color: var(--color-accent-light);
+}
+
+.member {
+  padding: 50px 20px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.member h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+.member-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  justify-items: center;
+}
+
+.member-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 100%;
+  max-width: 250px;
+  text-align: center;
+}
+
+.member-card img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.member-card h3 {
+  font-size: 1.2rem;
+  margin: 10px 0 5px;
+}
+
+.member-card p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+
+.data-region-provinsi {
+  padding: 40px 0;
+  background-color: #fff;
+  text-align: left  ;
+}
+
+.data-region-provinsi h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+/* Membuat chart responsive */
+.chart-container {
+  position: relative;
+  width: 100%;
+  max-width: 1500px;
+  height: 1000px;
+  margin: 0 auto;
+}
+
+.chart-container canvas {
+  width: 100% !important;
+  height: auto !important;
+}
+
+
+
+/* ======= GALLERY ======= */
+.gallery {
+  padding: 60px 20px;
+  background-color: #f9fafb;
+  text-align: center;
+}
+
+.gallery h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #1f2937;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-button {
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.btn-gallery {
+  display: inline-block;
+  padding: 12px 1rem;
+  background-color: #0051ff; /* Hitam modern */
+  color: #fff;
+  border-radius: 8px;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-gallery:hover {
+  background-color: #374151; /* Hover abu-abu gelap */
+}
+
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* ======= BERITA ======= */
+.berita {
+  padding: 40px 0;
+  background: #f2faff;
+}
+
+.berita h2 {
+  text-align: left;
+  font-size: 1.8rem;
+}
+
+.news-item {
+  margin-top: 20px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-left: 5px solid var(--color-accent);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* ======= KONTAK ======= */
+.kontak {
+  padding: 40px 0;
+  background: #f0faff;
+  text-align: center;
+}
+
+.kontak h2 {
+  font-size: 1.8rem;
+}
+
+.kontak form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.kontak input,
+.kontak textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  background: #ffffff;
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.kontak button {
+  background-color: var(--color-accent);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.kontak button:hover {
+  background-color: var(--color-accent-light);
+}
+
+/* ======= MEDSOS ======= */
+.medsos {
+  padding: 40px 0;
+  background: #ffffff;
+  text-align: center;
+}
+
+.medsos h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.social-icons a.ig { background-color: #e4405f; }
+.social-icons a.fb { background-color: #3b5998; }
+.social-icons a.tt { background-color: #010101; }
+.social-icons a.yt { background-color: #ff0000; }
+
+.social-icons a:hover {
+  opacity: 0.85;
+}
+
+/* ======= FOOTER ======= */
+footer {
+  background-color: #f5f5f5;
+  color: #333;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+}
