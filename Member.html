@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Member Komunitas Itasha</title>
+  <style>
+       :root {
+      --color-bg: #121212;
+      --color-surface: #1F1F1F;
+      --color-card: #2A2A2A;
+      --color-text: #E0E0E0;
+      --color-subtext: #A8A8A8;
+      --color-accent: #008311;
+      --color-accent-light: #66FFCC;
+      --color-border: #2C2C2C;
+      --color-white-soft: #F5F5F5;
+      --color-grad-hero: linear-gradient(to right, #121212, #1F1F1F);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--color-grad-hero);
+      color: var(--color-text);
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 32px;
+      font-weight: 600;
+      color: var(--color-white-soft);
+    }
+
+    #searchInput {
+      width: 100%;
+      padding: 14px 20px;
+      font-size: 16px;
+      margin-bottom: 40px;
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+      background-color: var(--color-surface);
+      backdrop-filter: blur(5px);
+      color: var(--color-text);
+      outline: none;
+      transition: background-color 0.3s;
+    }
+
+    #searchInput::placeholder {
+      color: var(--color-subtext);
+    }
+
+    #searchInput:focus {
+      background-color: var(--color-card);
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 30px;
+    }
+
+    .member-card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .member-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .card-header {
+      padding: 24px 20px 10px;
+      text-align: center;
+    }
+
+    .card-header img.profile {
+      width: 100%;
+      height: 230px;
+      border-radius: 16px;
+      border: 4px solid var(--color-border);
+      object-fit: cover;
+      margin-bottom: 12px;
+    }
+
+    .card-header h3 {
+      font-size: 20px;
+      margin-bottom: 5px;
+      color: black;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 5px 14px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-top: 6px;
+      color: #fff;
+    }
+
+    .badge.ketua {
+      background: #e74c3c;
+    }
+
+    .badge.wakil {
+      background: #3498db;
+    }
+
+    .badge.anggota {
+      background: #2ecc71;
+    }
+
+    .badge.member {
+      background: #2ecc71;
+    }
+
+    .card-body {
+      text-align: center;
+      padding: 10px 20px 20px;
+    }
+
+    .card-body p {
+      margin: 6px 0;
+      color: black;
+      font-size: 14px;
+    }
+
+    .card-footer img.motor {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-top: 1px solid var(--color-border);
+    }
+
+    @media screen and (max-width: 500px) {
+      h1 {
+        font-size: 24px;
+      }
+
+      .card-header img.profile {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>ACTIVE MEMBER OF ARK</h1>
+    <input type="text" id="searchInput" placeholder="Search By Region, Role, And More.." />
+
+    <div class="card-container" id="memberCards">
+
+      <!-- Member 1 -->
+      <div class="member-card">
+        <div class="card-header">
+          <img class="profile" src="member/REYNALDI .png" alt="Riko">
+          <h3>Reynaldi</h3>
+          <span class="badge ketua">Ketua</span>
+        </div>
+        <div class="card-body">
+          <p>Balikpapan</p>
+          <p>Suzuki Nex 2 - Zhu Yuan ZZZ</p>
+        </div>
+      </div>
+
+      <!-- Member 2 -->
+      <div class="member-card">
+        <div class="card-header">
+          <img class="profile" src="member/KELVIN.png" alt="Kelvin">
+          <h3>Kelvin</h3>
+          <span class="badge ketua">Wakil Ketua</span>
+        </div>
+        <div class="card-body">
+          <p>Balikpapan</p>
+          <p>All New Vario 150 - (No Character)</p>
+        </div>
+      </div>
+
+      <!-- Member 3 -->
+      <div class="member-card">
+        <div class="card-header">
+          <img class="profile" src="member/Rendy.jpg" alt="Rendy">
+          <h3>Rendy</h3>
+          <span class="badge wakil">Admin Medsos 1</span>
+        </div>
+        <div class="card-body">
+          <p>Balikpapan</p>
+          <p>Scoopy 2019 - Arthur Pencilgon</p>
+        </div>
+      </div>
+
+       <div class="member-card">
+        <div class="card-header">
+          <img class="profile" src="member/Gusti_Shido.jpg" alt="Kelvin">
+          <h3>Gusti</h3>
+          <span class="badge wakil">Admin Medsos 2</span>
+        </div>
+        <div class="card-body">
+          <p>Balikpapan</p>
+          <p>MX New 135 - Frieren</p>
+        </div>
+      </div>
+
+       <div class="member-card">
+        <div class="card-header">
+          <img class="profile" src="member/FARHAN .jpg" alt="Kelvin">
+          <h3>Farhan</h3>
+          <span class="badge wakil">Pengurus Region</span>
+        </div>
+        <div class="card-body">
+          <p>Samarinda</p>
+          <p>All New Vario 150 - Sakamata Chloe </p>
+        </div>
+      </div>
+
+       <div class="member-card">
+        <div class="card-header">
+          <img class="profile" src="member/Catur.jpg" alt="Kelvin">
+          <h3>Catur</h3>
+          <span class="badge member">Member</span>
+        </div>
+        <div class="card-body">
+          <p>Balikpapan</p>
+          <p>	Vixion NVL 2013 - Oda Nobuna</p>
+        </div>
+      </div>
+
+       <div class="member-card">
+        <div class="card-header">
+          <img class="profile" src="member/Ari.jpg" alt="Kelvin">
+          <h3>Ari</h3>
+          <span class="badge member">Member</span>
+        </div>
+        <div class="card-body">
+          <p>Sangatta</p>
+          <p>	Yamaha Lexi 125 - Topaz </p>
+        </div>
+      </div>
+
+       <div class="member-card">
+        <div class="card-header">
+          <img class="profile" src="member/AGUNG.png" alt="Kelvin">
+          <h3>Agung</h3>
+          <span class="badge member">Member</span>
+        </div>
+        <div class="card-body">
+          <p>Balikpapan</p>
+          <p>Aerox Old 155 - Watanabe You </p>
+        </div>
+      </div>
+
+       <div class="member-card">
+        <div class="card-header">
+          <img class="profile" src="member/ADIMAS.PNG" alt="Kelvin">
+          <h3>Adimas</h3>
+          <span class="badge member">Member</span>
+        </div>
+        <div class="card-body">
+          <p>Samarinda</p>
+          <p>	Vario 125 Gen 2 - Hoshimi Miyabi ZZZ</p>
+        </div>
+      </div>
+
+       <div class="member-card">
+        <div class="card-header">
+          <img class="profile" src="member/Dewa.jpg" alt="Kelvin">
+          <h3>Dewa</h3>
+          <span class="badge member">Member</span>
+        </div>
+        <div class="card-body">
+          <p>Balikpapan</p>
+          <p>	Vario 125 New - Alya</p>
+        </div>
+       </div>
+
+       <div class="member-card">
+        <div class="card-header">
+          <img class="profile" src="member/ARIL .jpg" alt="Kelvin">
+          <h3>Aril</h3>
+          <span class="badge member">Member</span>
+        </div>
+        <div class="card-body">
+          <p>Samarinda</p>
+          <p>Merk Motor: </p>
+        </div>
+      </div>
+
+       <div class="member-card">
+        <div class="card-header">
+          <img class="profile" src="member/YANTO.JPG" alt="Kelvin">
+          <h3>Yanto</h3>
+          <span class="badge member">Member</span>
+        </div>
+        <div class="card-body">
+          <p>Balikpapan</p>
+          <p>	R15 V4 Blue</p>
+        </div>
+      </div>
+
+       <div class="member-card">
+        <div class="card-header">
+          <img class="profile" src="member/Wahyu.jpg" alt="Kelvin">
+          <h3>Wahyu</h3>
+          <span class="badge member">Member</span>
+        </div>
+        <div class="card-body">
+          <p>Balikpapan</p>
+          <p> (FB)	Mio M3 - Seiha Shinjui </p>
+        </div>
+      </div>
+
+      <div class="member-card">
+        <div class="card-header">
+          <img class="profile" src="member/David.jpg" alt="Kelvin">
+          <h3>David</h3>
+          <span class="badge member">Member</span>
+        </div>
+        <div class="card-body">
+          <p>Balikpapan</p>
+          <p>Vario 160</p>
+        </div>
+      </div>
+
+      <div class="member-card">
+        <div class="card-header">
+          <img class="profile" src="member/BIMA.jpg" alt="Kelvin">
+          <h3>Bima</h3>
+          <span class="badge member">Member</span>
+        </div>
+        <div class="card-body">
+          <p>Samarinda</p>
+          <p>	Jupiter MX Old - Alisa Mikhailovna Kujou</p>
+        </div>
+      </div>
+
+      <div class="member-card">
+        <div class="card-header">
+          <img class="profile" src="member/Rizqy.jpg" alt="Kelvin">
+          <h3>Rizqy</h3>
+          <span class="badge member">Member</span>
+        </div>
+        <div class="card-body">
+          <p>Samarinda</p>
+          <p>	Scoopy Old - Nakiri Ayame</p>
+        </div>
+      </div>
+
+      <div class="member-card">
+        <div class="card-header">
+          <img class="profile" src="member/Fajar.jpg" alt="Kelvin">
+          <h3>Fajar</h3>
+          <span class="badge member">Member</span>
+        </div>
+        <div class="card-body">
+          <p>Balikpapan</p>
+          <p>Honda Supra GTR - Nishikigi Chisato</p>
+        </div>
+      </div>
+
+      <div class="member-card">
+        <div class="card-header">
+          <img class="profile" src="member/" alt="Rizky">
+          <h3>Rizky</h3>
+          <span class="badge member">Member</span>
+        </div>
+        <div class="card-body">
+          <p>Region: Balikpapan</p>
+          <p>	R125 - Barbara</p>
+        </div>
+      </div>
+
+      <div class="member-card">
+        <div class="card-header">
+          <img class="profile" src="member/" alt="Amar">
+          <h3>Amar</h3>
+          <span class="badge member">Member</span>
+        </div>
+        <div class="card-body">
+          <p>Balikpapan</p>
+          <p>	CB150R - Vestia Zeta</p>
+        </div>
+      </div>
+
+      <div class="member-card">
+        <div class="card-header">
+          <img class="profile" src="member/Arif.jpg" alt="Kelvin">
+          <h3>Arif</h3>
+          <span class="badge member">Member</span>
+        </div>
+        <div class="card-body">
+          <p>Balikpapan</p>
+          <p>	Vario 160 - Clara<p>
+        </div>
+      </div>
+
+      <div class="member-card">
+        <div class="card-header">
+          <img class="profile" src="membe" alt="Joy">
+          <h3>Joy</h3>
+          <span class="badge member">Member</span>
+        </div>
+        <div class="card-body">
+          <p>Balikpapan</p>
+          <p>Jupiter Z1 - Burhan (?)</p>
+        </div>
+      </div>
+
+      <div class="member-card">
+        <div class="card-header">
+          <img class="profile" src="member/SANATA.jpg" alt="Kelvin">
+          <h3>Sanata</h3>
+          <span class="badge member">Member</span>
+        </div>
+        <div class="card-body">
+          <p>Samarinda</p>
+          <p>- Scoopy ESP 2018 (Usami Sumireko)
+- Mio Smile 2009 (Umi Kousaka)
+- Honda Civic EK3 1996 (Shinosawa Hiro)</p>
+        </div>
+      </div>
+
+      <div class="member-card">
+        <div class="card-header">
+          <img class="profile" src="member/NUR SYAWAL.jpeg" alt="Kelvin">
+          <h3>Syawal</h3>
+          <span class="badge member">Member</span>
+        </div>
+        <div class="card-body">
+          <p>Banjarmasin</p>
+          <p>Honda Genio - Kyoko Hori</p>
+        </div>
+      </div>
+
+      <div class="member-card">
+        <div class="card-header">
+          <img class="profile" src="member/AIRUL.jpg" alt="Kelvin">
+          <h3>Airul</h3>
+          <span class="badge member">Member</span>
+        </div>
+        <div class="card-body">
+          <p>Balikpapan</p>
+          <p>(Detail tidak disebutkan)</p>
+        </div>
+      </div>
+
+      <div class="member-card">
+        <div class="card-header">
+          <img class="profile" src="member/Vidi.jpg" alt="Kelvin">
+          <h3>Vidi</h3>
+          <span class="badge member">Member</span>
+        </div>
+        <div class="card-body">
+          <p>Balikpapan</p>
+          <p>	Honda Revo Fit - Ryo Yamada</p>
+        </div>
+      </div>
+
+      <div class="member-card">
+        <div class="card-header">
+          <img class="profile" src="member/Hermawan.jpg" alt="Kelvin">
+          <h3>Hermawan</h3>
+          <span class="badge member">Member</span>
+        </div>
+        <div class="card-body">
+          <p>Balikpapan</p>
+          <p>	Honda Beat FI 2014 - Elaina</p>
+        </div>
+      </div>
+
+      <div class="member-card">
+        <div class="card-header">
+          <img class="profile" src="member/Wildan.jpg" alt="Kelvin">
+          <h3>Wildan</h3>
+          <span class="badge member">Member</span>
+        </div>
+        <div class="card-body">
+          <p>Balikpapan</p>
+          <p>Mazda Demio - Zeta</p>
+        </div>
+      </div>
+
+      <div class="member-card">
+        <div class="card-header">
+          <img class="profile" src="" alt="Dicky">
+          <h3>Dicky</h3>
+          <span class="badge member">Member</span>
+        </div>
+        <div class="card-body">
+          <p>Balikpapan</p>
+          <p>	Beatstreet 2022 - Hoshino Family</p>
+        </div>
+      </div>
+
+      <div class="member-card">
+        <div class="card-header">
+          <img class="profile" src="member/Ricky.jpg" alt="Kelvin">
+          <h3>Ricky</h3>
+          <span class="badge member">Member</span>
+        </div>
+        <div class="card-body">
+          <p>Balikpapan</p>
+          <p>-</p>
+        </div>
+      </div>
+
+      <div class="member-card">
+        <div class="card-header">
+          <img class="profile" src="member/ARKI.jpg" alt="Kelvin">
+          <h3>Arki</h3>
+          <span class="badge member">Member</span>
+        </div>
+        <div class="card-body">
+          <p>Balikpapan</p>
+          <p>	Jupiter MX Old - Zero Two</p>
+        </div>
+      </div>
+
+      
+
+    </div>
+  </div>
+
+  <script>
+    const searchInput = document.getElementById("searchInput");
+    const cards = document.querySelectorAll(".member-card");
+
+    searchInput.addEventListener("input", () => {
+      const search = searchInput.value.toLowerCase();
+      cards.forEach(card => {
+        const name = card.querySelector("h3").textContent.toLowerCase();
+        const role = card.querySelector(".badge").textContent.toLowerCase();
+        const region = card.querySelector(".card-body").textContent.toLowerCase();
+        const match = name.includes(search) || role.includes(search) || region.includes(search);
+        card.style.display = match ? "block" : "none";
+      });
+    });
+  </script>
+</body>
+</html>

@@ -95,10 +95,10 @@ body {
 
 /* ======= HEADER ======= */
 header {
-  background-image: url("https://ik.imagekit.io/hdxn6kcob/WhatsApp%20Image%202025-07-27%20at%2003.10.39.jpeg?updatedAt=1753557063563");
+  background-image: url("https://ik.imagekit.io/hdxn6kcob/snapedit_1753596359759%20(1)%20(1).jpeg?updatedAt=1753596987562");
   background-position: center;
   background-size: cover;
-  height: 400px;
+  height: 450px;
   color: white;
   text-align: center;
   padding: 3rem 3rem;
@@ -226,6 +226,18 @@ header h2 {
 
 .member-card:hover {
   transform: scale(1.05);
+}
+.btn-member {
+  margin-top: 20px;
+  background-color: var(--color-accent);
+  color: var(--color-text);
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s;
 }
 
 .data-region-provinsi {

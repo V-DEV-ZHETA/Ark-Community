@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Galeri Foto</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f7f7f7;
+    }
+
+    .gallery-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2em;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 15px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-grid img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="gallery-container">
+    <h2>Galeri Foto (TAHAP PENGEMBANGAN)
+    </h2>
+    <div class="gallery-grid">
+      <!-- Ganti src dengan link gambar kamu -->
+      <img src="gallery/1.JPG" alt="Foto 1">
+      <img src="gallery/2.JPG" alt="Foto 2">
+      <img src="gallery/3.JPG" alt="Foto 3">
+      <img src="gallery/4.JPG" alt="Foto 4">
+      <img src="gallery/5.JPG" alt="Foto 5">
+      <img src="gallery/6.JPG" alt="Foto 6">
+      <img src="gallery/8.jpg" alt="Foto 7">
+      <img src="gallery/9.jpg" alt="Foto 8">
+      <!-- Tambahkan lebih banyak <img> sesuai kebutuhan -->
+    </div>
+  </div>
+
+</body>
+</html>
