@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Anime Riding Kalimantan</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -46,21 +47,6 @@
     </div>
   </section>
 
-  <!-- BERITA -->
-  <section class="berita" id="berita">
-    <div class="container">
-      <h2>ARK NEWS UPDATE</h2>
-      <div class="news-item">
-        <h3>Anime Ride Festival 2025</h3>
-        <p>Kami akan hadir di Anime Ride Festival Samarinda, 15 Agustus 2025. Siap-siap bertemu para rider itasha dari seluruh Indonesia!</p>
-      </div>
-      <div class="news-item">
-        <h3>Kolaborasi Bareng Komunitas Cosplay</h3>
-        <p>Event seru bareng komunitas cosplay Samarinda. Tampil dengan mobil itasha dan karakter favorit kamu!</p>
-      </div>
-    </div>
-  </section>
-
   <!-- MEDSOS -->
   <section class="medsos">
     <div class="container">
@@ -73,17 +59,45 @@
     </div>
   </section>
 
+  <!-- BERITA -->
+  <section class="berita" id="berita">
+  <div class="container">
+    <h2>ARK NEWS UPDATE (CONTOH UPDATE KEGIATAN)</h2>
+    <div class="berita-grid">
+      <div class="news-item">
+        <h3>Anime Ride Festival 2025</h3>
+        <p>Kami akan hadir di Anime Ride Festival Samarinda, 15 Agustus 2025. Siap-siap bertemu para rider itasha dari seluruh Indonesia!</p>
+      </div>
+      <div class="news-item">
+        <h3>Kolaborasi Bareng Komunitas Cosplay</h3>
+        <p>Event seru bareng komunitas cosplay Samarinda. Tampil dengan mobil itasha dan karakter favorit kamu!</p>
+      </div>
+      <div class="news-item">
+        <h3>Gathering ARK Balikpapan</h3>
+        <p>Acara kumpul bareng komunitas ARK di Pantai Melawai, lengkap dengan sesi foto dan rolling thunder!</p>
+      </div>
+      <div class="news-item">
+        <h3>Pengenalan Member Baru</h3>
+        <p>Selamat datang untuk member baru dari Bontang, Tenggarong, dan Penajam. Welcome to the family!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
   <!-- SECTION MEMBER -->
 <section class="member">
   <div class="container">
     <h2>ACTIVE MEMBER OF ARK</h2>
+
     <div class="member-grid">
+      <!-- Kartu Member -->
       <div class="member-card">
         <img src="member/REYNALDI .png" alt="Member 1">
         <h3>Reynaldi</h3>
         <p>Ketua Komunitas</p>
       </div>
-      <div class="member-card">
+        <div class="member-card">
         <img src="member/KELVIN.png" alt="Member 2">
         <h3>Kelvin</h3>
         <p>Wakil Ketua</p>
@@ -118,12 +132,15 @@
         <h3>Agung</h3>
         <p>Member</p>
       </div>
+    </div>
+
+    <!-- Tombol di Tengah -->
+    <div class="member-button">
       <a href="Member.html" class="btn-member">Full Member Click Disini!!</a>
-
-
     </div>
   </div>
 </section>
+
 
 
 <!-- DATA REGION PROVINSI & KOTA -->
@@ -136,39 +153,69 @@
 </section>
 
   <!-- GALLERY -->
- <section id="gallery" class="gallery">
+<section id="gallery" class="gallery-vertical">
   <div class="container">
-    <h2>ARK GALLERY</h2>
-    <div class="gallery-grid">
-      <img src="assets/scoopy.jpg" alt="Itasha 1">
-      <img src="assets/Vario-alya.jpg" alt="Itasha 2">
-      <img src="assets/vario-chloe.jpg" alt="Itasha 3">
-      <img src="assets/Beat-stree.jpg" alt="Itasha 4">
-      <img src="assets/Cb-150.jpg" alt="Itasha 5">
-      <img src="assets/beat-elaina.jpg" alt="Itasha 6">
-      <img src="assets/Vario-alya.jpg" alt="Itasha 7">
-      <img src="assets/beat-kazusa.jpg" alt="Itasha 8">
+    <h2 class="section-title">ARK GALLERY</h2>
+
+    <div class="gallery-masonry">
+      <img src="assets/scoopy.jpg" alt="Itasha 1" class="gallery-img">
+      <img src="assets/beat-elaina.jpg" alt="Itasha 2" class="gallery-img">
+      <img src="assets/Beat-stree.jpg" alt="Itasha 3" class="gallery-img">
+      <img src="assets/vario-chloe.jpg" alt="Itasha 4" class="gallery-img">
+      <img src="assets/Cb-150.jpg" alt="Itasha 5" class="gallery-img">
+      <img src="assets/Vario-alya.jpg" alt="Itasha 6" class="gallery-img">
+      <img src="assets/Cb-150.jpg" alt="Itasha 5" class="gallery-img">
+      <img src="assets/Vario-alya.jpg" alt="Itasha 6" class="gallery-img">
+      <img src="assets/beat-elaina.jpg" alt="Itasha 2" class="gallery-img">
+      
     </div>
-    
-    <!-- Tombol Lihat Galeri -->
-    <div class="gallery-button">
-      <a href="gallery.html" class="btn-gallery">Lihat Galeri Lengkap</a>
+
+    <a href="gallery.html" class="btn-minimal">Lihat Galeri Lengkap</a>
+  </div>
+</section>
+
+
+  <!-- KONTAK -->
+  <!-- KONTAK -->
+<section class="kontak-section" id="kontak">
+  <div class="container kontak-wrapper">
+    <div class="kontak-form-box">
+      <h2>Hubungi Kami</h2>
+      <p class="kontak-subtitle">Punya pertanyaan atau ingin bergabung dengan komunitas ARK? Kirim pesanmu di sini!</p>
+
+      <form id="contactForm" class="kontak-form">
+        <div class="input-group">
+          <input type="text" placeholder="Nama Lengkap" required>
+        </div>
+        <div class="input-group">
+          <input type="email" placeholder="Alamat Email" required>
+        </div>
+        <div class="input-group">
+          <textarea placeholder="Tulis pesan kamu..." rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn-kirim">Kirim Pesan</button>
+      </form>
+    </div>
+
+    <div class="info-kontak-box">
+      <h3>Kontak Admin</h3>
+      <ul class="kontak-list">
+        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/62895419698020" target="_blank">Kelvin (Admin 1)</a></li>
+        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/628214992575" target="_blank">Bobby (Admin 2)</a></li>
+        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/62859106885729" target="_blank">Farhan (Admin 3)</a></li>
+        <li><i class="fab fa-instagram"></i> <a href="https://instagram.com/animeridek_" target="_blank">@animeridek_</a></li>
+        <li><i class="fas fa-envelope"></i> <a href="mailto:ark.community@gmail.com">ark.community@gmail.com</a></li>
+      </ul>
+      <h3>Web Developer - Zheta</h3>
+      <ul class="kontak-list">
+        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/6283844630670" target="_blank">+6283844630670</a></li>
+        <li><i class="fab fa-instagram"></i> <a href="https://instagram.com/meowzheta" target="_blank">@meowzheta</a></li>
+        </ul>
     </div>
   </div>
 </section>
 
-  <!-- KONTAK -->
-  <section class="kontak" id="kontak">
-    <div class="container">
-      <h2>Kontak Kami (TAHAP PENGEMBANGAN)</h2>
-      <form id="contactForm">
-        <input type="text" placeholder="Nama" required>
-        <input type="email" placeholder="Email" required>
-        <textarea placeholder="Pesan kamu..." required></textarea>
-        <button type="submit">Kirim</button>
-      </form>
-    </div>
-  </section>
+
 
   <footer>
     <div class="container">

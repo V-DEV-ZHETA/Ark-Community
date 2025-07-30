@@ -5,17 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Member Komunitas Itasha</title>
   <style>
-       :root {
-      --color-bg: #121212;
-      --color-surface: #1F1F1F;
-      --color-card: #2A2A2A;
-      --color-text: #E0E0E0;
-      --color-subtext: #A8A8A8;
-      --color-accent: #008311;
-      --color-accent-light: #66FFCC;
-      --color-border: #2C2C2C;
-      --color-white-soft: #F5F5F5;
-      --color-grad-hero: linear-gradient(to right, #121212, #1F1F1F);
+    :root {
+      --color-bg: #e9f5ec;
+      --color-surface: #d6f0dd;
+      --color-card: #ffffff;
+      --color-text: #2e3a2b;
+      --color-subtext: #5a7c63;
+      --color-accent: #2c6e49;
+      --color-accent-light: #8fcbbc;
+      --color-border: #bcd8c1;
+      --color-white-soft: #fefefe;
+      --color-grad-hero: linear-gradient(to right, #f1fbe9, #d8f5c2);
     }
 
     * {
@@ -42,7 +42,7 @@
       margin-bottom: 40px;
       font-size: 32px;
       font-weight: 600;
-      color: var(--color-white-soft);
+      color: var(--color-accent);
     }
 
     #searchInput {
@@ -64,7 +64,7 @@
     }
 
     #searchInput:focus {
-      background-color: var(--color-card);
+      background-color: var(--color-accent-light);
     }
 
     .card-container {
@@ -74,11 +74,11 @@
     }
 
     .member-card {
-      background: white;
+      background: var(--color-card);
       border-radius: 20px;
       overflow: hidden;
       backdrop-filter: blur(10px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 8px 20px rgba(44, 110, 73, 0.1);
       transition: transform 0.3s ease;
     }
 
@@ -103,7 +103,7 @@
     .card-header h3 {
       font-size: 20px;
       margin-bottom: 5px;
-      color: black;
+      color: var(--color-text);
     }
 
     .badge {
@@ -117,19 +117,16 @@
     }
 
     .badge.ketua {
-      background: #e74c3c;
+      background: #388e3c;
     }
 
     .badge.wakil {
-      background: #3498db;
+      background: #43a047;
     }
 
-    .badge.anggota {
-      background: #2ecc71;
-    }
-
+    .badge.anggota,
     .badge.member {
-      background: #2ecc71;
+      background: #66bb6a;
     }
 
     .card-body {
@@ -139,7 +136,7 @@
 
     .card-body p {
       margin: 6px 0;
-      color: black;
+      color: var(--color-text);
       font-size: 14px;
     }
 
@@ -168,7 +165,6 @@
     <input type="text" id="searchInput" placeholder="Search By Region, Role, And More.." />
 
     <div class="card-container" id="memberCards">
-
       <!-- Member 1 -->
       <div class="member-card">
         <div class="card-header">
@@ -500,7 +496,7 @@
 
       <div class="member-card">
         <div class="card-header">
-          <img class="profile" src="" alt="Dicky">
+          <img class="profile" src="member/DICKY.jpg" alt="Dicky">
           <h3>Dicky</h3>
           <span class="badge member">Member</span>
         </div>
@@ -518,7 +514,7 @@
         </div>
         <div class="card-body">
           <p>Balikpapan</p>
-          <p>-</p>
+          <p>NMAX 2021 – Frieren</p>
         </div>
       </div>
 
@@ -534,8 +530,25 @@
         </div>
       </div>
 
+      <div class="member-card">
+        <div class="card-header">
+          <img class="profile" src="member/ARKI.jpg" alt="Kelvin">
+          <h3>Joshua</h3>
+          <span class="badge member">Member</span>
+        </div>
+        <div class="card-body">
+          <p>Pontianak</p>
+          <p>		Suzuki Satria 2-Tak – </p>
+        </div>
+      </div>
+
       
 
+    </div>
+  </div>
+      <!-- Kartu member tetap seperti sebelumnya -->
+      <!-- Tidak diubah karena hanya visual/style yang berubah -->
+      <!-- Kamu bisa lanjutkan kode member di sini -->
     </div>
   </div>
 
